@@ -1,4 +1,5 @@
 import { DATABASE_ID, TOKEN } from "./config/index";
+
 export async function getStaticProps() {
   const options = {
     method: "POST",
@@ -18,13 +19,7 @@ export async function getStaticProps() {
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
-  const result = await res.json;
-  console.log(result);
-  return {
-    (
-        <>
-        result
-    </>
-    )
-  };
+  // const result = await res.json;
+  console.log(res);
+  return res;
 }
